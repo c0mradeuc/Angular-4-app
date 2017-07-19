@@ -1,0 +1,23 @@
+<div fxFlex="grow" fxLayout="row" fxLayoutAlign="center center">
+    <md-card>
+        <md-card-title>Registrarse</md-card-title>
+        <md-card-subtitle>Ingrese sus datos</md-card-subtitle>
+        <md-card-content>
+            <div>
+                <md-input-container>
+                    <input mdInput type="email" name="email" [(ngModel)]="signUp.email" placeholder="Correo Electrónico">
+                </md-input-container>
+            </div>
+            <div>
+                <md-input-container>
+                    <input mdInput type="password" [(ngModel)]="signUp.password" placeholder="Contraseña">
+                </md-input-container>
+            </div>
+            <div>{{ creationErrorMsg }}</div>
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button>VOLVER</button>
+            <button md-raised-button color="primary" (click)="createUser()">CREAR</button>
+        </md-card-actions>
+    </md-card>
+</div>
